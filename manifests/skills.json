@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "name": "atria-agent-methods",
+  "audience": "agent builders and engineering teams",
+  "skills": [
+    {
+      "id": "os",
+      "path": "skills/os",
+      "purpose": "project state, multi-session collaboration, handoff, mailbox, and governance",
+      "status": "curated-private-preview"
+    },
+    {
+      "id": "compass",
+      "path": "skills/compass",
+      "purpose": "minimal product direction and verifiable requirements",
+      "status": "curated-private-preview"
+    },
+    {
+      "id": "design-os",
+      "path": "skills/design-os",
+      "purpose": "shareable UI judgment, design workflow, feedback, and preflight",
+      "status": "community-core-private-preview"
+    }
+  ]
+}

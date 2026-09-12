@@ -1,0 +1,13 @@
+# Local staging copies that are not part of the first shared release.
+/skills/agent-architect/
+/skills/agent-project-memory-zh/
+/skills/dispatching-parallel-agents/
+/skills/executing-plans/
+/skills/system-design/
+
+# Never commit local state or generated/private material.
+.env
+.env.*
+*.local
+node_modules/
+.DS_Store
