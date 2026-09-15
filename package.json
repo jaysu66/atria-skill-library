@@ -1,0 +1,14 @@
+{
+  "name": "atria-skill-library",
+  "version": "0.1.0-private.1",
+  "private": true,
+  "description": "Versioned, domain-extensible collection of reusable Atria Skills and practices.",
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/verify-library.mjs",
+    "verify": "node scripts/verify-library.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

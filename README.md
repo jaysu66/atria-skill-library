@@ -1,6 +1,6 @@
 # Atria Skill Library
 
-这是 Atria 的个人能力与经验总库，面向希望获得可复用 Skill、工作方法和实践经验的用户。
+这是 Atria 的个人能力与经验总库，面向希望获得可复用 Skill、工作方法和实践经验的用户。当前版本：**0.1.0-private.1**。
 
 它和 [atria-cli](../atria-cli) 是两个不同受众的资产包：
 
@@ -29,9 +29,15 @@
 
 执行型能力仍由独立的 [atria-cli](https://github.com/jaysu66/atria-cli) 提供；本仓库通过说明和清单引用它，不复制底层引擎。
 
-## 安装方式
+## 安装、更新与验证
 
-当前为私有预览。下载仓库后，把需要的 Skill 目录复制到目标 Agent 的 Skills 目录，或由宿主提供的 Skill 安装机制接入。先阅读该目录 README，再按 `SKILL.md` 的路由加载引用文件。
+当前为私有预览。下载仓库后，把需要的完整 Skill 目录复制到目标 Agent 的 Skills 目录，或由宿主提供的 Skill 安装机制接入。不要只复制 `SKILL.md`：有些能力需要同目录的 references、scripts 或 assets。详细步骤见 [安装与更新](docs/INSTALL.md)。
+
+```powershell
+npm test
+```
+
+这个命令会核对 manifest、Skill 入口、README、目录名、公开边界和常见敏感信息；它不替代许可证审查或真实宿主体验。
 
 不要复制以下内容：真实项目 `PROJECT-STATE.md`、mailbox、锁、会话记录、个人偏好、客户资料、凭据、本机路径和进行中的进程状态。
 
@@ -44,4 +50,6 @@
 
 ## 状态
 
-这是私有共享资产预览，不是最终公共发行版。见 [LICENSE-STATUS.md](LICENSE-STATUS.md) 和 [manifests/skills.json](manifests/skills.json)。
+正式共享区目前只有上表 3 个 Skill。`incubator/` 是本机来源待核的候选区，被 Git 忽略，不进入下载包，也不应被 Agent 自动发现。
+
+这是私有共享资产预览，不是最终公共发行版。见 [开放准备状态](OPEN-SOURCE-READINESS.md)、[许可状态](LICENSE-STATUS.md)、[贡献说明](CONTRIBUTING.md)、[安全说明](SECURITY.md) 和 [机器清单](manifests/skills.json)。
