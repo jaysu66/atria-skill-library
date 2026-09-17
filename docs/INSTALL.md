@@ -2,7 +2,7 @@
 
 ## Download
 
-During private review, clone or download the private repository through an authorized account. After publication, use a tagged release rather than an arbitrary branch snapshot. Verify the release tag and published SHA-256 before installing.
+Before publication, clone the private release candidate through an authorized account. After publication, use a tagged release rather than an arbitrary branch snapshot. Verify the release tag and published SHA-256 before installing.
 
 ## Install one Skill
 
@@ -19,6 +19,10 @@ npm test
 ```
 
 Then ask the target Agent to list or load the installed Skill. For `os`, run its read-only doctor in a disposable Git project before using initialization or write commands. For `design-os` and `compass`, verify that the Agent can load the bundled supporting files rather than only the entrypoint.
+
+`design-os` does not bundle Refero data or credentials. Refero research requires
+the user's own official account and MCP authorization; the Skill remains usable
+without Refero.
 
 ## Update
 

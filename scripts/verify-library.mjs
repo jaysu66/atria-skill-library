@@ -7,7 +7,19 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'manifests', 'skills.json'), 'utf8'));
 const packageJson = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'));
 assert.equal(manifest.version, packageJson.version, 'manifest/package version mismatch');
-assert.equal(packageJson.private, true, 'private preview must not be publishable through npm');
+assert.equal(packageJson.private, true, 'skill library must not be publishable through npm by accident');
+
+for (const required of [
+  'LICENSE',
+  'NOTICE',
+  'TRADEMARKS.md',
+  'THIRD_PARTY_NOTICES.md',
+  'PROVENANCE.md',
+  'MAINTENANCE.md',
+  'SECURITY.md'
+]) {
+  assert.equal(fs.existsSync(path.join(root, required)), true, `missing release file: ${required}`);
+}
 
 const findings = [];
 const files = [];
@@ -23,11 +35,11 @@ function walk(dir) {
 }
 walk(root);
 
-const forbiddenSegments = new Set(['.agent-memory', '.agent-workbench', '.qa-reports', 'mailbox', 'locks', 'recordings', 'outputs', 'knowledge-base', 'company-assets', 'customer-data']);
-const forbiddenExtensions = new Set(['.exe', '.dll', '.zip', '.7z', '.tar', '.gz', '.pem', '.pfx', '.key']);
+const forbiddenSegments = new Set(['.agent-memory', '.agent-workbench', '.qa-reports', 'mailbox', 'locks', 'recordings', 'outputs', 'knowledge-base', 'company-assets', 'customer-data', 'personal', 'refero-archive']);
+const forbiddenExtensions = new Set(['.exe', '.dll', '.zip', '.7z', '.tar', '.gz', '.pem', '.pfx', '.key', '.otf', '.ttf', '.woff', '.woff2']);
 for (const full of files) {
   const rel = path.relative(root, full).replaceAll('\\', '/');
-  const parts = rel.split('/');
+  const parts = rel.split('/').map(part => part.toLowerCase());
   if (parts.some(part => forbiddenSegments.has(part))) findings.push({ type: 'private-path', path: rel });
   if (forbiddenExtensions.has(path.extname(rel).toLowerCase())) findings.push({ type: 'binary-or-archive', path: rel });
   if (/^\.env(?:\.|$)/i.test(path.basename(rel))) findings.push({ type: 'environment-file', path: rel });
@@ -37,6 +49,12 @@ for (const full of files) {
   if (/(?:api[_-]?key|access[_-]?token|client[_-]?secret|password)\s*[:=]\s*["'][^"'\s]{16,}["']/i.test(text)) findings.push({ type: 'secret-like-assignment', path: rel });
   if (text.includes(['-----BEGIN ', 'PRIVATE KEY-----'].join(''))) findings.push({ type: 'private-key', path: rel });
 }
+
+assert.equal(
+  fs.existsSync(path.join(root, 'skills', 'agent-engineering', 'design-os', '3-references', 'REFERO.md')),
+  true,
+  'design-os: missing Refero external-source boundary'
+);
 
 for (const skill of manifest.skills) {
   const dir = path.join(root, skill.path);

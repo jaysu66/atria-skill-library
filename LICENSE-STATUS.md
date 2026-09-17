@@ -1,21 +1,19 @@
 # License and publication status
 
-This repository is a private shared-asset preview. It contains selected
-method guidance and templates, not the author's private project memory.
+Repository content is licensed under Apache License 2.0. The license covers the
+tracked Atria-authored documentation, scripts, templates, and configuration in
+the release candidate. It does not relicense linked third-party material or
+grant rights to Atria project identity beyond accurate attribution.
 
-Before making it public, confirm ownership and redistribution rights for each
-copied Skill and reference. Assign an explicit license to self-authored text,
-keep third-party references as links unless their license is clear, and run a
-history/secret scan. The Design OS personal preference archive, customer
-material, private reference library, fonts, and research dumps are excluded.
+The Design OS personal preference archive, customer material, Refero-derived
+archive, screenshots, font binaries, research dumps, and project-local state
+are excluded. Refero is available only as an optional user-authorized external
+connection and remains governed by Refero's own terms.
 
-The current preview intentionally leaves component licensing as
-`review-required`; private hosting is not a substitute for a legal review.
-No `LICENSE` file is present, so the repository does not currently grant
-permission to copy, modify, or redistribute its contents. The author must
-select and approve a repository license before public visibility is enabled.
+Candidate material under the ignored local `incubator/` directory is not part
+of the distributable repository. It must receive item-level provenance and
+license review before it can move into `skills/`.
 
-Candidate material under the local ignored `incubator/` directory is not part
-of this repository's distributable boundary. It may include material derived
-from other Skill collections and must receive item-level provenance and license
-review before it can move into `skills/`.
+See `LICENSE`, `NOTICE`, `TRADEMARKS.md`, `THIRD_PARTY_NOTICES.md`, and
+`PROVENANCE.md`. Public visibility still requires the final technical release
+gates recorded in `OPEN-SOURCE-READINESS.md`.

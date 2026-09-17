@@ -1,6 +1,6 @@
 # Atria Skill Library
 
-这是 Atria 的个人能力与经验总库，面向希望获得可复用 Skill、工作方法和实践经验的用户。当前版本：**0.1.0-private.1**。
+这是 Atria 的可复用 Skill、工作方法和实践经验库。它源于 Atria 对企业多 Agent 协作、组织上下文和 Agent 工程的探索，同时允许未来扩展到其他有价值的能力领域。当前候选版本：**0.1.0-rc.1**。
 
 它和 [atria-cli](../atria-cli) 是两个不同受众的资产包：
 
@@ -15,7 +15,7 @@
 |---|---|---|
 | [`os`](skills/agent-engineering/os/) | 多会话项目归位、状态、锁、信箱、交接和治理 | 使用并行 Agent 的项目负责人 |
 | [`compass`](skills/agent-engineering/compass/) | 用最小结构写清产品方向、边界、需求和验收 | 产品负责人、开发 Agent |
-| [`design-os`](skills/agent-engineering/design-os/) | UI 判断、反 AI 味、设计流程、反馈和交付预检 | UI/前端设计者和 Agent |
+| [`design-os`](skills/agent-engineering/design-os/) | UI 判断、可选 Refero 研究、设计流程、反馈和交付预检 | UI/前端设计者和 Agent |
 
 每个 Skill 都有自己的 README 和 `SKILL.md`：README 给人看，`SKILL.md` 给 Agent 路由和执行。可以按目录单独安装，不需要整包启用。
 
@@ -31,7 +31,7 @@
 
 ## 安装、更新与验证
 
-当前为私有预览。下载仓库后，把需要的完整 Skill 目录复制到目标 Agent 的 Skills 目录，或由宿主提供的 Skill 安装机制接入。不要只复制 `SKILL.md`：有些能力需要同目录的 references、scripts 或 assets。详细步骤见 [安装与更新](docs/INSTALL.md)。
+公开后优先下载带标签的 Release；当前发布候选仍保持私有。把需要的完整 Skill 目录复制到目标 Agent 的 Skills 目录，或由宿主提供的 Skill 安装机制接入。不要只复制 `SKILL.md`：有些能力需要同目录的 references、scripts 或 assets。详细步骤见 [安装与更新](docs/INSTALL.md)。
 
 ```powershell
 npm test
@@ -48,8 +48,12 @@ npm test
 3. Skill 只在匹配任务时加载，避免把整套方法灌入每个 Agent。
 4. 事实、推断、假设和未知分开写；未验证的经验不包装成保证。
 
+## 许可与维护
+
+仓库内容采用 [Apache License 2.0](LICENSE)。Atria 项目身份不随源码许可开放，详见 [TRADEMARKS.md](TRADEMARKS.md)。第三方来源边界见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 和 [PROVENANCE.md](PROVENANCE.md)。项目按 [best-effort](MAINTENANCE.md) 方式维护，不提供 SLA。
+
 ## 状态
 
 正式共享区目前只有上表 3 个 Skill。`incubator/` 是本机来源待核的候选区，被 Git 忽略，不进入下载包，也不应被 Agent 自动发现。
 
-这是私有共享资产预览，不是最终公共发行版。见 [开放准备状态](OPEN-SOURCE-READINESS.md)、[许可状态](LICENSE-STATUS.md)、[贡献说明](CONTRIBUTING.md)、[安全说明](SECURITY.md) 和 [机器清单](manifests/skills.json)。
+`0.1.0-rc.1` 是公开发布候选，不等于已经批准切换 GitHub 可见性。见 [开放准备状态](OPEN-SOURCE-READINESS.md)、[许可状态](LICENSE-STATUS.md)、[贡献说明](CONTRIBUTING.md)、[安全说明](SECURITY.md) 和 [机器清单](manifests/skills.json)。
