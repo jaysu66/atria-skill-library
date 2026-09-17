@@ -104,7 +104,7 @@
 | UI-Layout | 类 Aceternity 创意组件 | 未验证 | 未验证 | 复制粘贴(未验证) | 未验证 |
 | Motion Primitives | Motion 官方向动效原语 | Motion + Tailwind | 未验证 | 复制/CLI(未验证) | 与 shadcn 生态叠加 |
 | shadcn/ui | 应用 UI 底座(非动效) | Radix + Tailwind | MIT | CLI + 注册表 | 注册表 + MCP 生态,agent 友好度高 |
-【抄哪里】2026 通行搭法:shadcn/ui 底座 → Magic UI 加动效 → 签名区块上 Aceternity <https://www.pkgpulse.com/guides/react-bits-animated-components-2026>;优先 21st.dev Magic MCP <https://21st.dev/>;要「拥有源码、无供应链风险」选 React Bits/Aceternity 复制粘贴(注意 React Bits Commons Clause,详见 ../3-references/ENGINE.md)。
+【怎么选】先核对组件当前许可证，再决定通过官方安装方式引入；不要把第三方组件源码复制进 Skill 再分发。需要 Refero 研究时按 `../3-references/REFERO.md` 使用用户自己的官方连接。
 
 ## 9 业界学习源(谁开源了什么 / 按什么顺序学)
 

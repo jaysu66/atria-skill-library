@@ -1,0 +1,23 @@
+name: Feature request
+description: Propose a reusable capability or improvement.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Describe the recurring user problem, not only a proposed implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Usage evidence
+      description: Explain where this problem occurred without sharing private project or customer data.
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed capability and boundaries
+    validations:
+      required: true

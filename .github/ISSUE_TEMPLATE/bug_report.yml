@@ -1,0 +1,39 @@
+name: Bug report
+description: Report a reproducible problem in a Skill or repository tool.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include credentials, customer data, private project state, screenshots containing personal information, or Refero exports.
+  - type: input
+    id: skill
+    attributes:
+      label: Affected Skill
+      placeholder: os, compass, design-os, or repository tooling
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and minimal reproduction
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: Agent host and version
+      placeholder: Codex, Claude Code, or another host
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, private data, customer content, and third-party dataset exports.
+          required: true

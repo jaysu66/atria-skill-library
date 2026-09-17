@@ -1,25 +1,40 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "name": "atria-skill-library",
+  "version": "0.1.0-rc.1",
+  "publicationStatus": "PUBLIC_RELEASE_CANDIDATE",
   "audience": "users selecting reusable skills and practices",
   "skills": [
     {
       "id": "os",
       "path": "skills/agent-engineering/os",
       "purpose": "project state, multi-session collaboration, handoff, mailbox, and governance",
-      "status": "curated-private-preview"
+      "status": "release-candidate",
+      "licenseStatus": "Apache-2.0",
+      "requires": ["markdown", "git-optional", "node-18-optional"]
     },
     {
       "id": "compass",
       "path": "skills/agent-engineering/compass",
       "purpose": "minimal product direction and verifiable requirements",
-      "status": "curated-private-preview"
+      "status": "release-candidate",
+      "licenseStatus": "Apache-2.0",
+      "requires": ["markdown"]
     },
     {
       "id": "design-os",
       "path": "skills/agent-engineering/design-os",
       "purpose": "shareable UI judgment, design workflow, feedback, and preflight",
-      "status": "community-core-private-preview"
+      "status": "release-candidate",
+      "licenseStatus": "Apache-2.0",
+      "requires": ["markdown"]
     }
+  ],
+  "excludedLocalIncubator": [
+    {"id": "agent-architect", "reason": "provenance-and-license-review-required"},
+    {"id": "agent-project-memory-zh", "reason": "provenance-and-license-review-required"},
+    {"id": "dispatching-parallel-agents", "reason": "third-party-origin-review-required"},
+    {"id": "executing-plans", "reason": "third-party-origin-review-required"},
+    {"id": "system-design", "reason": "authorship-and-license-record-required"}
   ]
 }

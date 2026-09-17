@@ -69,5 +69,5 @@ node path/to/os/scripts/os-doctor.cjs
 
 ## 来源与许可
 
-本 Skill 源自个人 project-os 实践的通用化副本。公开发布前请在仓库根目录补充正式
+本 Skill 源自作者个人 project-os 实践的通用化版本；本仓库是共享版本的唯一来源。公开发布前请在仓库根目录补充正式
 `LICENSE` 和第三方 `NOTICE`（当前许可状态：待确认）。
