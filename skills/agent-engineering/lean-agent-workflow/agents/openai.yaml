@@ -1,0 +1,6 @@
+interface:
+  display_name: "Lean Agent Workflow"
+  short_description: "Short, risk-based product delivery workflow"
+
+policy:
+  allow_implicit_invocation: false
