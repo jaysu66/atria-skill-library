@@ -11,7 +11,11 @@
       "purpose": "project state, multi-session collaboration, handoff, mailbox, and governance",
       "status": "release-candidate",
       "licenseStatus": "Apache-2.0",
-      "requires": ["markdown", "git-optional", "node-18-optional"]
+      "requires": [
+        "markdown",
+        "git-optional",
+        "node-18-optional"
+      ]
     },
     {
       "id": "compass",
@@ -19,7 +23,9 @@
       "purpose": "minimal product direction and verifiable requirements",
       "status": "release-candidate",
       "licenseStatus": "Apache-2.0",
-      "requires": ["markdown"]
+      "requires": [
+        "markdown"
+      ]
     },
     {
       "id": "design-os",
@@ -27,14 +33,41 @@
       "purpose": "shareable UI judgment, design workflow, feedback, and preflight",
       "status": "release-candidate",
       "licenseStatus": "Apache-2.0",
-      "requires": ["markdown"]
+      "requires": [
+        "markdown"
+      ]
+    },
+    {
+      "id": "lean-agent-workflow",
+      "path": "skills/agent-engineering/lean-agent-workflow",
+      "purpose": "short risk-based product delivery workflow with focused critical-path evidence",
+      "status": "release-candidate",
+      "licenseStatus": "Apache-2.0",
+      "requires": [
+        "markdown"
+      ]
     }
   ],
   "excludedLocalIncubator": [
-    {"id": "agent-architect", "reason": "provenance-and-license-review-required"},
-    {"id": "agent-project-memory-zh", "reason": "provenance-and-license-review-required"},
-    {"id": "dispatching-parallel-agents", "reason": "third-party-origin-review-required"},
-    {"id": "executing-plans", "reason": "third-party-origin-review-required"},
-    {"id": "system-design", "reason": "authorship-and-license-record-required"}
+    {
+      "id": "agent-architect",
+      "reason": "provenance-and-license-review-required"
+    },
+    {
+      "id": "agent-project-memory-zh",
+      "reason": "provenance-and-license-review-required"
+    },
+    {
+      "id": "dispatching-parallel-agents",
+      "reason": "third-party-origin-review-required"
+    },
+    {
+      "id": "executing-plans",
+      "reason": "third-party-origin-review-required"
+    },
+    {
+      "id": "system-design",
+      "reason": "authorship-and-license-record-required"
+    }
   ]
 }
